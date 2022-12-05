@@ -1,0 +1,29 @@
+.calculator-screen {
+  height: 50px;
+  background-color: orange;
+  margin-bottom: 15px;
+  border-radius: 20px 20px 0 0;
+}
+
+.calculator-screen p {
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.calculator-card {
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  border-radius: 20px 20px 0 0;
+}
+
+.calculator-piece-card {
+  margin: 5px;
+}
+
+.calculator-piece-card button {
+  padding: 7px;
+  width: 35px;
+  justify-content: center;
+}

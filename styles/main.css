@@ -1,0 +1,161 @@
+@import url("contact.css");
+@import url("navbar.css");
+@import url("slideshow.css");
+@import url("articles.css");
+@import url("breadcrumb.css");
+@import url("calculator.css");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+
+html,
+body {
+  margin: 0 auto;
+  background-color: #d1caca;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: black;
+  font-style: italic;
+}
+
+.site-logo {
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: "Crete Round", Times serif;
+  color: black;
+  text-shadow: 2px 2px 5px rgb(255, 34, 5), 2px 2px 8px rgba(255, 208, 0, 0.726);
+}
+
+.header-section ul {
+  width: 50%;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+  font-family: "Trebuchet MS", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+  font-weight: 600;
+  border-radius: 20px 20px 0 0;
+}
+
+.header-section li {
+  float: left;
+}
+
+.header-section li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.header-section li a:hover {
+  background-color: #111;
+}
+
+.header-section .dropdown-content {
+  display: none;
+  background-color: red;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-menu:hover .dropdown-content {
+  display: block;
+}
+
+.content-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #efefef;
+  border-radius: 0 0 20px 20px;
+  font-family: "Trebuchet MS", Geneva, Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+.content-section {
+  padding: 15px;
+}
+
+.youtuber-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+  padding: 7px;
+  border-radius: 20px;
+}
+
+.youtuber-content {
+  background-color: orange;
+  padding: 15px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.youtuber-content img {
+  border-radius: 50%;
+  margin: auto;
+}
+
+.youtuber-content p {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.result-card {
+  margin-top: 3%;
+  background-color: red;
+  border-radius: 20px;
+  color: white;
+}
+
+.result-content {
+  padding: 15px;
+}
+
+.calculation-result {
+  margin: 0;
+}
+
+.weight-class {
+  margin-bottom: 0;
+}
+
+.social-media-section {
+  margin-top: 15px;
+}
+
+.social-media-section a {
+  padding: 3px;
+}
+
+.social-media-section a:link {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: red;
+}
+
+footer p {
+  margin-top: 5px;
+}
+
+#spor-plan {
+  margin-top: 15px;
+}
+
+#spor-plan tr td {
+  padding: 8px;
+}

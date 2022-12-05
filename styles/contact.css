@@ -1,0 +1,22 @@
+.contact-section {
+  padding: 15px;
+}
+
+.contact-section form {
+  padding: 5px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section button {
+  margin-left: 5px;
+  width: 30%;
+}
+
+.contact-form input,
+textarea {
+  width: 30%;
+}

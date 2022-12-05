@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Counter - Bodybuilding</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+</head>
+
+<body>
+    <h1 class="site-logo">Bodybuilding</h1>
+
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Features
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./quiz.html">Quiz</a>
+                <a href="./converter.html">lbs to kg</a>
+                <a href="./counter.html">Counter</a>
+                <a href="./bmi-calculator.html">BMI Calculator</a>
+                <a href="./calculator.html">Calculator</a>
+                <a href="./exercise-generator.html">Exercise Generator</a>
+            </div>
+        </div>
+        <a href="../articles.html">Articles</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+
+    <div class="content-wrapper">
+        <section class="content-section">
+            <h2>Counter</h2>
+            <p>Let's see how many reps you can!</p>
+
+            <h2 class="reps-show">0</h2>
+
+            <button onclick="increase()">Increase</button>
+            <button onclick="decrease()">Decrease</button>
+            <button onclick="reset()">Reset</button>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media-section">
+            <a href="https://www.instagram.com/bergaman9/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/bergaman9" class="fa fa-twitter"></a>
+            <a href="https://github.com/bergaman9" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/omerguler/" class="fa fa-linkedin"></a>
+            <a href="https://open.spotify.com/user/omerguler53?si=fd7cda6c48e544d0&nd=1" class="fa fa-spotify"></a>
+        </div>
+        <p><a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script>
+        let count = 0
+
+        function increase() {
+            count++;
+            document.querySelector(".reps-show").innerHTML = count;
+        }
+
+        function decrease() {
+            count--;
+            document.querySelector(".reps-show").innerHTML = count;
+        }
+
+        function reset() {
+            count = 0
+            document.querySelector(".reps-show").innerHTML = count;
+        }
+    </script>
+</body>
+
+</html>

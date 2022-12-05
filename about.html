@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About - Bodybuilding</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+
+<body>
+    <h1 class="site-logo">Bodybuilding</h1>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Features
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="features/quiz.html">Quiz</a>
+                <a href="features/converter.html">lbs to kg</a>
+                <a href="features/counter.html">Counter</a>
+                <a href="features/bmi-calculator.html">BMI Calculator</a>
+                <a href="features/calculator.html">Calculator</a>
+                <a href="features/exercise-generator.html">Exercise Generator</a>
+            </div>
+        </div>
+        <a href="articles.html">Articles</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="content-wrapper">
+        <section class="content-section">
+            <h2>About</h2>
+            <div style="text-align: center;">
+                <img style="border: 5px solid red; border-radius: 50%;" src="images/me.jpg" alt="bergaman photo"
+                    width="150px" height="150px">
+            </div>
+
+            <p>I'm Ömer, <i class="my-age"></i> years old. I like video games, movies, music, books etc. My
+                main goal in this stage of my life is to develop myself in my area of electrical-electronics engineering
+                and software engineering.</p>
+            <p>Currently I'm working on full-stack web development and this is my one of the best site just with
+                front-end elements like HTML, CSS, JS. I'll add new features while learning and I will try to keep
+                update.</p>
+            <p>In this site, I didn't use any prepared templates. I writed all of this site with only using HTML, CSS
+                and JS.
+                You can <a href="contact.html">contact</a>
+                with me if you have any suggestion for site.</p>
+            <p>My future goals are to develop more modern websites with React and also develop websites at back-end
+                with
+                Node.js,
+                Python and Java. After gaining more experience I want to enter mobile area with React Native Framework
+                and
+                desktop area with Electron Framework.</p>
+            <p>I also like to watch courses about computer science principles, programming foundations and advanced
+                programming
+                courses to come out of the shell. Sometimes, Google is the best resource to learn something and I use
+                documentation and communities to improve myself in programming arena.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media-section">
+            <a href="https://www.instagram.com/bergaman9/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/bergaman9" class="fa fa-twitter"></a>
+            <a href="https://github.com/bergaman9" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/omerguler/" class="fa fa-linkedin"></a>
+            <a href="https://open.spotify.com/user/omerguler53?si=fd7cda6c48e544d0&nd=1" class="fa fa-spotify"></a>
+        </div>
+        <p><a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script>
+        let today = new Date();
+        let myBirthDate = new Date("11/14/2001");
+        let myAgeinYears = (today - myBirthDate) / 1000 / (3600 * 24 * 365);
+        document.querySelector(".my-age").innerHTML = myAgeinYears.toFixed(2);
+    </script>
+</body>
+
+</html>

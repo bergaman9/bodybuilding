@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz - Bodybuilding</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+</head>
+
+<body>
+    <h1 class="site-logo">Bodybuilding</h1>
+
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <div class="dropdown">
+            <button class="dropbtn">Features
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="./quiz.html">Quiz</a>
+                <a href="./converter.html">lbs to kg</a>
+                <a href="./counter.html">Counter</a>
+                <a href="./bmi-calculator.html">BMI Calculator</a>
+                <a href="./calculator.html">Calculator</a>
+                <a href="./exercise-generator.html">Exercise Generator</a>
+            </div>
+        </div>
+        <a href="../articles.html">Articles</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../contact.html">Contact</a>
+    </div>
+
+    <div class="content-wrapper">
+        <section class="content-section">
+            <h2>Quiz</h2>
+            <p>This page tests your knowledge about bodybuilding.</p>
+
+            <p class="question"></p>
+
+            <label>
+                <input type="radio" name="answer" class="option-1">
+                <span class="o1-text">Mustafa Kemal Atatürk</span>
+            </label><br>
+
+            <label>
+                <input type="radio" name="answer" class="option-2">
+                <span class="o2-text">Nikola Tesla</span>
+            </label><br>
+
+            <label>
+                <input type="radio" name="answer" class="option-3">
+                <span class="o3-text">Adolf Hitler</span>
+            </label><br>
+
+            <label>
+                <input type="radio" name="answer" class="option-4">
+                <span class="o4-text">Aristotales</span>
+            </label><br>
+            <br>
+
+            <button onclick="validate()">Answer</button>
+            <button onclick="next()">Next</button>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-media-section">
+            <a href="https://www.instagram.com/bergaman9/" class="fa fa-instagram"></a>
+            <a href="https://twitter.com/bergaman9" class="fa fa-twitter"></a>
+            <a href="https://github.com/bergaman9" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/omerguler/" class="fa fa-linkedin"></a>
+            <a href="https://open.spotify.com/user/omerguler53?si=fd7cda6c48e544d0&nd=1" class="fa fa-spotify"></a>
+        </div>
+        <p><a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+
+    <script>
+        let questions = {
+            question: ["Who is the founder of the Turkey?",
+                "What year did Arnold Schwarzenegger first win the Mr. Olympia title?",
+                "The repetition range most associated with mass building in the world of bodybuilding is ________ ."
+            ],
+            answer: ["Mustafa Kemal Atatürk", "1970", "6-8"],
+            options: [
+                ["Mustafa Kemal Atatürk", "Nikola Tesla", "Adolf Hitler", "Aristoteles"],
+                ["1975", "1980", "1970", "1985"],
+                ["9-12", "13-15", "1-4", "6-8"],
+            ],
+        }
+
+        let i = 0; // Array Iterator
+        let j = 0; // Question Index
+
+        setQuestion(j);
+        setOptions(j, i);
+
+        function setQuestion(j) {
+            document.querySelector(".question").innerHTML = `<b>${questions.question[j]}</b>`
+        }
+
+
+        function next() {
+            i = 0;
+            if (j !== questions.question.length - 1) {
+                setQuestion(++j)
+                setOptions(j, i++);
+                console.log(j)
+            }
+
+        }
+
+
+        function setOptions(j, i) {
+            let options = document.querySelectorAll("span");
+
+            options.forEach(option => {
+                console.log(option.innerHTML)
+                option.innerHTML = `${questions.options[j][i++]}`
+            })
+        }
+
+
+        function validate() {
+            i = 0;
+            let inputs = document.querySelectorAll("input");
+            console.log(inputs);
+
+            inputs.forEach(input => {
+                console.log(input)
+
+                input.setAttribute("value", questions.options[j][i++])
+
+                if (input.checked) {
+                    console.log(input, input.value, j)
+                    if (input.value === questions.answer[j]) {
+                        alert("Your answer is true.");
+
+                    } else {
+                        alert("Your answer is false.")
+
+                    }
+                    input.checked = false;
+                }
+            })
+
+        }
+    </script>
+</body>
+
+</html>
